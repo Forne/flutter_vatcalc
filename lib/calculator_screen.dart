@@ -146,7 +146,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
               height: 50,
               child: Card(
                 child: Text(
-                  'Сумма без НДС: $_resultWith',
+                  'Сумма без НДС: $_resultWithout',
                   style: const TextStyle(fontSize: 30),
                   textAlign: TextAlign.center,
                 ),
@@ -170,7 +170,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
               height: 50,
               child: Card(
                 child: Text(
-                  'Сумма с НДС: $_resultWithout',
+                  'Сумма с НДС: $_resultWith',
                   style: const TextStyle(fontSize: 30),
                   textAlign: TextAlign.center,
                 ),
