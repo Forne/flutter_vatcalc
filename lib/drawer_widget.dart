@@ -17,7 +17,7 @@ Widget navDrawer(context) => Drawer(
                       decoration: const BoxDecoration(
                           borderRadius:
                               BorderRadius.all(Radius.circular(50.0))),
-                      child: Icon(
+                      child: const Icon(
                         Icons.calculate,
                         size: 100,
                       ),

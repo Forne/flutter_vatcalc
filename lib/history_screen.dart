@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'drawer_widget.dart';
-
 class HistoryScreen extends StatefulWidget {
   const HistoryScreen({Key? key}) : super(key: key);
 
@@ -16,7 +14,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
       appBar: AppBar(
         title: const Text('История расчетов'),
       ),
-      drawer: navDrawer(context),
+      //drawer: navDrawer(context),
       body: const Center(
         child: Text("В разработке"),
       ),
