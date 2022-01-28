@@ -5,7 +5,8 @@ Widget navDrawer(context) => Drawer(
         padding: EdgeInsets.zero,
         children: [
           DrawerHeader(
-              decoration: const BoxDecoration(color: Colors.blue),
+              decoration:
+                  BoxDecoration(color: Theme.of(context).colorScheme.primary),
               child: SizedBox(
                 height: 200,
                 child: Column(

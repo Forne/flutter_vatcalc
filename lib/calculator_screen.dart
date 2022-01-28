@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:vatcalc/drawer_widget.dart';
-import 'package:vatcalc/vat_class.dart';
+import 'package:vatcalc/utils/vat_class.dart';
 
 class CalculatorScreen extends StatefulWidget {
   const CalculatorScreen({Key? key}) : super(key: key);
@@ -51,11 +51,9 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
             Container(
               alignment: Alignment.centerLeft,
               margin: const EdgeInsets.only(top: 10),
-              child: const Text(
+              child: Text(
                 "Параметры",
-                style: TextStyle(
-                  fontSize: 18,
-                ),
+                style: Theme.of(context).textTheme.bodyText2,
               ),
             ),
             TextField(
@@ -65,8 +63,6 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
               ],
               controller: textAmountController,
               decoration: const InputDecoration(
-                filled: true,
-                fillColor: Color(0xFFeceff1),
                 labelText: 'Сумма',
               ),
             ),
@@ -77,8 +73,6 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
               ],
               controller: textRateController,
               decoration: const InputDecoration(
-                filled: true,
-                fillColor: Color(0xFFeceff1),
                 labelText: 'Ставка',
               ),
             ),
@@ -134,47 +128,39 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
             Container(
               padding: const EdgeInsets.only(top: 10),
               alignment: Alignment.centerLeft,
-              child: const Text(
+              child: Text(
                 "Результат",
-                style: TextStyle(
-                  fontSize: 18,
-                ),
+                style: Theme.of(context).textTheme.bodyText2,
               ),
             ),
             SizedBox(
               width: double.infinity,
-              height: 50,
               child: Card(
                 child: Text(
                   'Сумма без НДС: $_resultWithout',
-                  style: const TextStyle(fontSize: 30),
+                  style: Theme.of(context).textTheme.headline4,
                   textAlign: TextAlign.center,
                 ),
-                color: const Color(0xFFECEFF1),
               ),
             ),
             SizedBox(
               width: double.infinity,
-              height: 50,
               child: Card(
                 child: Text(
                   'НДС: $_resultVAT',
-                  style: const TextStyle(fontSize: 30),
+                  style: Theme.of(context).textTheme.headline4,
                   textAlign: TextAlign.center,
                 ),
-                color: const Color(0xFFECEFF1),
               ),
             ),
             SizedBox(
               width: double.infinity,
-              height: 50,
               child: Card(
                 child: Text(
                   'Сумма с НДС: $_resultWith',
-                  style: const TextStyle(fontSize: 30),
+                  style: Theme.of(context).textTheme.headline4,
                   textAlign: TextAlign.center,
                 ),
-                color: const Color(0xFFECEFF1),
               ),
             ),
           ],
